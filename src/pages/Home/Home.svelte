@@ -2,6 +2,9 @@
   import { Logo, ButtonMenu } from '../../components';
 </script>
 
+<svelte:head>
+  <title>Forca | Menu</title>
+</svelte:head>
 <main class="wrapper">
   <div id="container-menu">
     <Logo />
