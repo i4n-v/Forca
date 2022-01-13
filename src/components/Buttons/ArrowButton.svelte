@@ -33,11 +33,11 @@
     box-shadow: 0 0 .5rem .4rem var(--colorThree);
   }
 
-  .arrow-button:hover > svg > * {
+  :global(.arrow-button:hover > svg > *) {
     stroke: var(--colorOne);
   }
 
-  .arrow-button > svg {
+  :global(.arrow-button > svg) {
     width: 50%;
     height: 50%;
   }

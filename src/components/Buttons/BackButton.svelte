@@ -34,11 +34,11 @@
     color: var(--colorOne);
   }
 
-  .back-button:hover > svg > * {
+  :global(.back-button:hover > svg > *) {
     stroke: var(--colorOne);
   }
 
-  .back-button > svg {
+  :global(.back-button > svg) {
     width: 30%;
     height: 30%;
   }
