@@ -83,8 +83,11 @@
     transition: .3s ease-in-out;
   }
 
-  .medias > div:hover > * {
+  .medias > div:hover > a {  
     color: var(--colorOne);
+  }
+
+  :global(.medias > div:hover > *) {  
     fill: var(--colorOne);
   }
 

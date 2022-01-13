@@ -17,25 +17,28 @@
     <div id="cards-container">
       <div>
         <AboutCard
-          author="teste"
-          instagram={{ src: "#", name: "teste" }}
-          github={{ src: "#", name: "teste" }}
-          linkedin={{ src: "#", name: "teste" }}
-        />
+          author="Victor Guilherme"
+          instagram={{ src: "https://www.instagram.com/vict0r_guilhermee/", name: "vict0r" }}
+          github={{ src: "https://github.com/Vict0r-Guilherme", name: "Vict0r" }}
+          linkedin={{ src: "https://www.linkedin.com/in/victor-guilherme-455951215", name: "vict0r" }}
+          img="/assets/img/git-blue.png"
+          />
         <AboutCard
           author="teste"
           instagram={{ src: "#", name: "teste" }}
           github={{ src: "#", name: "teste" }}
           linkedin={{ src: "#", name: "teste" }}
-        />
+          img="/assets/img/git-brown.png"
+          />
       </div>
       <div id="center-card">
         <AboutCard
-          author="teste"
-          instagram={{ src: "#", name: "teste" }}
-          github={{ src: "#", name: "teste" }}
-          linkedin={{ src: "#", name: "teste" }}
-        />
+          author="Ian Vinícius"
+          instagram={{ src: "https://www.instagram.com/i4n_v/", name: "i4n_v" }}
+          github={{ src: "https://github.com/i4n-v", name: "i4n-v" }}
+          linkedin={{ src: "https://www.linkedin.com/in/i4n-v/", name: "i4n-v" }}
+          img="/assets/img/git-green.png"
+          />
       </div>
       <div>
         <AboutCard
@@ -43,13 +46,15 @@
           instagram={{ src: "#", name: "teste" }}
           github={{ src: "#", name: "teste" }}
           linkedin={{ src: "#", name: "teste" }}
-        />
+          img="/assets/img/git-pink.png"
+          />
         <AboutCard
           author="teste"
           instagram={{ src: "#", name: "teste" }}
           github={{ src: "#", name: "teste" }}
           linkedin={{ src: "#", name: "teste" }}
-        />
+          img="/assets/img/git-purple.png"
+          />
       </div>
     </div>
   </div>
