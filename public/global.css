@@ -13,6 +13,8 @@
 	--nunito: 'Nunito Sans', sans-serif;
 }
 
+/* Global configurations */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -97,6 +99,9 @@ body {
 	animation: animeLeft 1.5s forwards;
 }
 
+
+/* Media queries */
+
 @media(max-width: 70rem) {
 	html {
 		font-size: 90%;
@@ -108,6 +113,26 @@ body {
 		font-size: 80%;
 	}
 }
+
+@media(max-width: 38rem) {
+	html {
+		font-size: 70%;
+	}
+}
+
+@media(max-width: 34rem) {
+	html {
+		font-size: 60%;
+	}
+}
+
+@media(max-width: 32rem) {
+	html {
+		font-size: 50%;
+	}
+}
+
+/* animations */
 
 @keyframes moveRight {
 	from {
