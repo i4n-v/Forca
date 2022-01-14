@@ -24,10 +24,10 @@
           img="/assets/img/git-blue.png"
           />
         <AboutCard
-          author="teste"
-          instagram={{ src: "#", name: "teste" }}
-          github={{ src: "#", name: "teste" }}
-          linkedin={{ src: "#", name: "teste" }}
+          author="Pedro Vinicius"
+          instagram={{ src: "#https://www.instagram.com/Pedrovinicius.1/", name: "Pedro" }}
+          github={{ src: "https://github.com/PdrVinicius", name: "Pedro" }}
+          linkedin={{ src: "https://www.linkedin.com/mwlite/in/pedro-vin%C3%ADcius-lopes-xavier-595b98198", name: "Pedro" }}
           img="/assets/img/git-brown.png"
           />
       </div>
@@ -42,17 +42,17 @@
       </div>
       <div>
         <AboutCard
-          author="teste"
-          instagram={{ src: "#", name: "teste" }}
-          github={{ src: "#", name: "teste" }}
-          linkedin={{ src: "#", name: "teste" }}
+          author="Polyana Giselle"
+          instagram={{ src: "https://www.instagram.com/poly_gih/", name: "poly_gih" }}
+          github={{ src: "https://github.com/Polyalves2", name: "poly" }}
+          linkedin={{ src: "#", name: "# _ #" }}
           img="/assets/img/git-pink.png"
           />
         <AboutCard
-          author="teste"
-          instagram={{ src: "#", name: "teste" }}
-          github={{ src: "#", name: "teste" }}
-          linkedin={{ src: "#", name: "teste" }}
+          author="Victor Antônio"
+          instagram={{ src: "https://www.instagram.com/victor_lemos2020/", name: "victor" }}
+          github={{ src: "https://github.com/victor16042002", name: "victor" }}
+          linkedin={{ src: "#", name: "# _ #" }}
           img="/assets/img/git-purple.png"
           />
       </div>
