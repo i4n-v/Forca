@@ -182,29 +182,30 @@
       player1 = {...player1, dollParts: 0};
       player2 = {...player2, dollParts: 0};
       forca = new Forca(randomWord(words), [], player1, player2, forca.round + 1);
-    }
 
-    if(forca.round > 3) {
-      if(player1.points > player2.points) {
-        modal = {
-            type: 'victory',
-            player: player1.name,
-            color: player1.color,
+        if(forca.round > 3) {
+          if(player1.points > player2.points) {
+            modal = {
+                type: 'victory',
+                player: player1.name,
+                color: player1.color,
+            }
+            return ;
+          }else if(player1.points < player2.points) {
+            modal = {
+                type: 'victory',
+                player: player2.name,
+                color: player2.color,
+            }
+            return ;
+          } else {
+            modal = {type: 'active'};
+            return ;
+          }
         }
-        return ;
-      }else if(player1.points < player2.points) {
-        modal = {
-            type: 'victory',
-            player: player2.name,
-            color: player2.color,
-        }
-        return ;
-      } else {
-        modal = {type: 'active'};
-        return ;
       }
     }
-  }
+
 </script>
 
 <svelte:head>
