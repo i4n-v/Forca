@@ -184,5 +184,6 @@
     margin: auto;
     width: 100%;
     max-width: 12rem;
+    position: relative;
   }
 </style>

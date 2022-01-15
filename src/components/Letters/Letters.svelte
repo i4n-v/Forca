@@ -1,10 +1,19 @@
 <script>
   export let letters = [];
+  export let selected = [];
+
+  function verifyInSelected(letter, selected) {
+    if(selected.includes(letter)) {
+      return letter;
+    } else {
+      return '';
+    }
+  }
 </script>
 
 <div class="letters">
   {#each letters as letter}
-    <span>{letter}</span>
+    <span>{verifyInSelected(letter, selected)}</span>
   {/each}
 </div>
 
@@ -13,10 +22,10 @@
     width: 100%;
     max-width: 30rem;
     padding: 1rem;
-    margin: 2rem auto;
+    margin: 2.2rem auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     gap: .8rem;
     flex-wrap: wrap;
   }
@@ -28,5 +37,6 @@
     font-size: 1.8rem;
     color: var(--colorFive);
     font-weight: bold;
+    height: 2.75rem;
   }
 </style>

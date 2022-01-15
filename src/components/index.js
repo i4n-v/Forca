@@ -12,6 +12,7 @@ import Linkedin from "./Svgs/Linkedin.svelte";
 import SelectedLetters from "./Cards/SelectedLetters.svelte";
 import PlayersCard from "./Cards/PlayersCard.svelte";
 import ForcaSvg from "./Svgs/ForcaSvg.svelte";
+import StickmanSvg from "./Svgs/StickmanSvg.svelte";
 import Letters from "./Letters/Letters.svelte";
 import GameButton from "./Buttons/GameButton.svelte";
 import KeyBoardGame from "./KeyboardGame/KeyBoardGame.svelte";
@@ -33,6 +34,7 @@ export {
   SelectedLetters,
   PlayersCard,
   ForcaSvg,
+  StickmanSvg,
   Letters,
   GameButton,
   KeyBoardGame,

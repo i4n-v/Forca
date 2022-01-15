@@ -1,8 +1,10 @@
 <script>
   export let letter = '';
+
+  export let onClick = () => {};
 </script>
 
-<button type="button" class="game-button">
+<button type="button" class="game-button" on:click={onClick(letter)}>
   {letter}
 </button>
 

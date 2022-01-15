@@ -28,15 +28,14 @@
     background: #fff;
     border-radius: 0.5rem;
     border: 0.2rem solid var(--colorOne);
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
   }
 
   #selected-letters > div > span {
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--colorFive);
+    margin-left: .5rem;
+    display: inline-block;
   }
 
   .title-ifn {

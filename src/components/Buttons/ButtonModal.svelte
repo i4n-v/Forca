@@ -2,9 +2,10 @@
   import { link } from "svelte-routing";
 
   export let href = "";
+  export let onClick = () => {};
 </script>
 
-<a {href} use:link class="btn-modal">
+<a {href} use:link on:click={onClick} class="btn-modal">
   <slot />
 </a>
 

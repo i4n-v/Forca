@@ -38,7 +38,7 @@
     {:else if slide === 1}
       <InfoContainer title="Condição de vitória" img="/assets/img/victory.png">
         A vitória de um jogador é determinada pela sua pontuação ao decorrer das
-        5 rodadas do jogo. A cada rodada os jogadores tentarão acertar a palavra
+        3 rodadas do jogo. A cada rodada os jogadores tentarão acertar a palavra
         determinada, escolhendo letra por letra, o jogador que acertar ganhará a
         rodada, que somará mais um ponto no total de sua pontuação.
       </InfoContainer>

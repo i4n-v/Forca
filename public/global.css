@@ -99,6 +99,10 @@ body {
 	animation: animeLeft 1.5s forwards;
 }
 
+.anime-scale {
+	animation: animeScale 0.3s ease-in;
+}
+
 
 /* Media queries */
 
@@ -150,4 +154,14 @@ body {
 		opacity: 1;
 		transform: initial;
 	}
+}
+
+@keyframes animeScale {
+	from {
+		 transform: scale(0.6); 
+		}
+  to {
+		 	transform: scale(1) ;
+		}
+
 }

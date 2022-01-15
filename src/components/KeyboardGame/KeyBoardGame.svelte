@@ -1,34 +1,36 @@
 <script>
-  import { GameButton } from '../'
+  import { GameButton } from '../';
+
+  export let onClick = () => {};
 </script>
 
 <div class="keyboard">
-  <GameButton letter="A" />
-  <GameButton letter="B" />
-  <GameButton letter="C" />
-  <GameButton letter="D" />
-  <GameButton letter="E" />
-  <GameButton letter="F" />
-  <GameButton letter="G" />
-  <GameButton letter="H" />
-  <GameButton letter="I" />
-  <GameButton letter="J" />
-  <GameButton letter="K" />
-  <GameButton letter="L" />
-  <GameButton letter="M" />
-  <GameButton letter="N" />
-  <GameButton letter="O" />
-  <GameButton letter="P" />
-  <GameButton letter="Q" />
-  <GameButton letter="R" />
-  <GameButton letter="S" />
-  <GameButton letter="T" />
-  <GameButton letter="U" />
-  <GameButton letter="V" />
-  <GameButton letter="W" />
-  <GameButton letter="X" />
-  <GameButton letter="Y" />
-  <GameButton letter="Z" />
+  <GameButton letter="A" onClick={onClick}/>
+  <GameButton letter="B" onClick={onClick}/>
+  <GameButton letter="C" onClick={onClick}/>
+  <GameButton letter="D" onClick={onClick}/>
+  <GameButton letter="E" onClick={onClick}/>
+  <GameButton letter="F" onClick={onClick}/>
+  <GameButton letter="G" onClick={onClick}/>
+  <GameButton letter="H" onClick={onClick}/>
+  <GameButton letter="I" onClick={onClick}/>
+  <GameButton letter="J" onClick={onClick}/>
+  <GameButton letter="K" onClick={onClick}/>
+  <GameButton letter="L" onClick={onClick}/>
+  <GameButton letter="M" onClick={onClick}/>
+  <GameButton letter="N" onClick={onClick}/>
+  <GameButton letter="O" onClick={onClick}/>
+  <GameButton letter="P" onClick={onClick}/>
+  <GameButton letter="Q" onClick={onClick}/>
+  <GameButton letter="R" onClick={onClick}/>
+  <GameButton letter="S" onClick={onClick}/>
+  <GameButton letter="T" onClick={onClick}/>
+  <GameButton letter="U" onClick={onClick}/>
+  <GameButton letter="V" onClick={onClick}/>
+  <GameButton letter="W" onClick={onClick}/>
+  <GameButton letter="X" onClick={onClick}/>
+  <GameButton letter="Y" onClick={onClick}/>
+  <GameButton letter="Z" onClick={onClick}/>
 </div>
 
 <style>

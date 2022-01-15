@@ -1,13 +1,15 @@
 <script>
   import { ButtonModal } from "../";
+
+  export let onClick = () => {};
 </script>
 
 <div class="modal">
-  <div>
+  <div class="anime-scale">
     <slot name="title" />
     <div>
       <ButtonModal href="/">MENU</ButtonModal>
-      <ButtonModal href="/jogar">JOGAR NOVAMENTE</ButtonModal>
+      <ButtonModal onClick={onClick}>JOGAR NOVAMENTE</ButtonModal>
     </div>
   </div>
 </div>
