@@ -35,7 +35,7 @@
         <AboutCard
           author="Pedro Vinicius"
           instagram={{
-            src: "#https://www.instagram.com/Pedrovinicius.1/",
+            src: "https://www.instagram.com/Pedrovinicius.1/",
             name: "Pedro",
           }}
           github={{ src: "https://github.com/PdrVinicius", name: "Pedro" }}

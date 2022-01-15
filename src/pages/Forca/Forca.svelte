@@ -91,8 +91,8 @@
     color: '',
   }
 
-  const name1 = window.prompt("Digite o nome do Jogador 1 :");
-  const name2 = window.prompt("Digite o nome do Jogador 2 :");
+  const name1 = window.prompt("Digite o nome do Jogador 1 :") || 'jogador 1';
+  const name2 = window.prompt("Digite o nome do Jogador 2 :") || 'jogador 2';
 
   let player1 = new Player(name1, 1, "#F04444");
   let player2 = new Player(name2, 2, "#4489F0");
@@ -116,14 +116,8 @@
   }
 
   function verifyAddPoint(word, selected) {
-    const wordArr = word.split('');
-    const boolean = wordArr.every((e) => selected.filter((selec) => selec === e).length > 0);
+    const boolean = word.every((e) => selected.filter((selec) => selec === e).length > 0);
     return boolean;
-  }
-
-  function formatStr(str){
-    const formated = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    return formated;
   }
 
   function formatArrStr(arr){
@@ -131,12 +125,63 @@
     return formated;
   }
 
+  console.log(formatArrStr(forca.word.split('')))
+
   function clickKeyBoard(letter) {
     let {selectedLetters, word, turn, player1, player2} = forca;
+    const formatedWord = formatArrStr(word.split(''));
     
-    if(!selectedLetters.includes(formatStr(letter))) {
+    if(!selectedLetters.includes(letter)) {
       const selected = selectedLetters.concat(letter);
       forca.selectedLetters = selected;
+    }
+
+    if(verifyAddPoint(formatedWord, forca.selectedLetters)) {
+      if(forca.turn === player1.id){
+        player1 = {...player1, dollParts: 0, points: player1.points + 1};
+        player2 = {...player2, dollParts: 0};
+        forca = new Forca(randomWord(words), [], player1, player2, forca.round + 1);
+      } else {
+        player1 = {...player1, dollParts: 0};
+        player2 = {...player2, dollParts: 0, points: player2.points + 1};
+        forca = new Forca(randomWord(words), [], player1, player2, forca.round + 1);
+      }
+    }
+    
+    if(!formatedWord.includes(letter)){
+      if(turn === player1.id  && !click) {
+        click = true;
+        const dollParts = player1.dollParts + 1;
+        forca.player1 = {...player1, dollParts};
+        
+        if(forca.player2.dollParts < 6){
+          setTimeout(() => {
+            forca.turn = player2.id;
+            click = false;
+          }, 1100);
+        } else {
+          click = false;
+        }
+      } else if(!click) {
+        click = true;
+        const dollParts = player2.dollParts + 1;
+        forca.player2 = {...player2, dollParts};
+                
+        if(forca.player1.dollParts < 6){
+          setTimeout(() => {
+            forca.turn = player1.id;
+            click = false;
+          }, 1100);
+        } else {
+          click = false;
+        }
+      }
+    }
+
+    if(forca.player1.dollParts >= 6 && forca.player2.dollParts >= 6) {
+      player1 = {...player1, dollParts: 0};
+      player2 = {...player2, dollParts: 0};
+      forca = new Forca(randomWord(words), [], player1, player2, forca.round + 1);
     }
 
     if(forca.round > 3) {
@@ -159,54 +204,6 @@
         return ;
       }
     }
-
-    if(player1.dollParts >= 5 && player2.dollParts >= 5) {
-      player1 = {...player1, dollParts: 0};
-      player2 = {...player2, dollParts: 0};
-      forca = new Forca(randomWord(words), [], player1, player2, forca.round + 1);
-      return ;
-    }
-
-    if(verifyAddPoint(word, forca.selectedLetters)) {
-      if(forca.turn === player1.id){
-        player1 = {...player1, dollParts: 0, points: player1.points + 1};
-        player2 = {...player2, dollParts: 0};
-        forca = new Forca(randomWord(words), [], player1, player2, forca.round + 1);
-        return ;
-      } else {
-        player1 = {...player1, dollParts: 0};
-        player2 = {...player2, dollParts: 0, points: player2.points + 1};
-        forca = new Forca(randomWord(words), [], player1, player2, forca.round + 1);
-        return ;
-      }
-    }
-    
-    if(!formatArrStr(word.split('')).includes(letter)){
-      if(turn === player1.id  && !click) {
-        click = true;
-        const dollParts = player1.dollParts + 1;
-        forca.player1 = {...player1, dollParts};
-        
-        if(player2.dollParts < 6){
-          setTimeout(() => {
-            forca.turn = player2.id;
-            click = false;
-          }, 1100);
-        }
-      } else if(!click) {
-        click = true;
-        const dollParts = player2.dollParts + 1;
-        forca.player2 = {...player2, dollParts};
-                
-        if(player1.dollParts < 6){
-          click = true;
-          setTimeout(() => {
-            forca.turn = player1.id;
-            click = false;
-          }, 1100);
-        }
-      }
-    }
   }
 </script>
 
@@ -223,7 +220,7 @@
         <StickmanSvg player={forca.turn === forca.player1.id ? forca.player1 : forca.player2} />
         <ForcaSvg />
       </div>
-      <Letters letters= {forca.word.split('')} selected={forca.selectedLetters} />
+      <Letters letters= {formatArrStr(forca.word.split(''))} selected={forca.selectedLetters} />
       <KeyBoardGame onClick={clickKeyBoard} />
     </div>
   </div>

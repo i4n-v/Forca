@@ -281,6 +281,7 @@
 <style>
   .stickman {
     width: 5.5rem;
+    height: 17.5rem;
     position: absolute;
     top: 1.3rem;
     left: 7.1rem;
