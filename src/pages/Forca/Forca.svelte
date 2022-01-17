@@ -125,8 +125,6 @@
     return formated;
   }
 
-  console.log(formatArrStr(forca.word.split('')))
-
   function clickKeyBoard(letter) {
     let {selectedLetters, word, turn, player1, player2} = forca;
     const formatedWord = formatArrStr(word.split(''));
@@ -184,14 +182,14 @@
       forca = new Forca(randomWord(words), [], player1, player2, forca.round + 1);
 
         if(forca.round > 3) {
-          if(player1.points > player2.points) {
+          if(forca.player1.points > forca.player2.points) {
             modal = {
                 type: 'victory',
                 player: player1.name,
                 color: player1.color,
             }
             return ;
-          }else if(player1.points < player2.points) {
+          }else if(forca.player1.points < forca.player2.points) {
             modal = {
                 type: 'victory',
                 player: player2.name,
